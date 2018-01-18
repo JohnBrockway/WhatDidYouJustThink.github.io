@@ -19,3 +19,12 @@ function getLatest() {
 function operateListenDropdown() {
     document.getElementById("dropdownMenu").classList.toggle("show");
 }
+
+function closeDropdownOnOutsideClick (e) {
+    if (!e.target.matches('#dropdownToggle')) {
+        var dropdown = document.getElementById("dropdownMenu");
+        if (dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+        }
+    }
+}

@@ -12,7 +12,7 @@
         <div id="main">
 
             <div id="header">
-                <a href="#home" class="headerLink">Home &#8595;</a>
+                <a href="#main" class="headerLink">Home &#8595;</a>
                 <div id="dropdownContainer">
                     <a href="javascript:operateListenDropdown()" class="headerLink" id="dropdownToggle">Listen Now</a>
                     <div class="dropdownMenu" id="dropdownMenu">
@@ -76,14 +76,7 @@
         <script src="js/mainScript.js"></script>
         <script>
             // Close the dropdown if the user clicks outside of it
-            window.onclick = function(e) {
-                if (!e.target.matches('#dropdownToggle')) {
-                    var myDropdown = document.getElementById("dropdownMenu");
-                    if (myDropdown.classList.contains('show')) {
-                        myDropdown.classList.remove('show');
-                    }
-                }
-            }
+            window.onclick = closeDropdownOnOutsideClick;
         </script>
 
     </body>
